@@ -34,7 +34,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             collection_name="my_collection",
             embedding_function=embedding_function
         )
-        num_docs = 2
+        num_docs = 3
         results = db.similarity_search_with_score(user_message, k=num_docs)
         model_name = "google/flan-t5-large"
         tokenizer = AutoTokenizer.from_pretrained(model_name)

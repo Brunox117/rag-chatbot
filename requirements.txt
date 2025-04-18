@@ -1,0 +1,28 @@
+# Dependencias básicas
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-text-splitters>=0.3.0
+langchain-community>=0.3.0
+langchain-chroma>=0.2.0         # Base de datos vectorial
+langchain-huggingface>=0.1.0    # Integración con Hugging Face
+
+# Modelos de embeddings y LLM
+sentence-transformers>=3.0.0    # Para los embeddings
+transformers>=4.0.0             # Biblioteca principal de Hugging Face
+torch>=2.0.0                    # Requerido para modelos de transformers
+
+# Vectorstore
+chromadb>=0.4.0                 # Almacenamiento de vectores
+
+# Manejo de documentos
+pypdf>=3.0.0                    # Para procesar archivos PDF
+
+# API
+flask>=3.1.0
+
+# Opcional
+pytest                          # Para tests
+boto3                           # Para AWS si se usa Bedrock en el futuro
+
+# Dependencias de telegram bots
+python-telegram-bot>=20.0

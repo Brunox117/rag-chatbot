@@ -1,11 +1,15 @@
 import logging
+import os
+from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 from query_data import PROMPT_TEMPLATE
 from langchain.prompts import ChatPromptTemplate
 
-# Placeholder para el token del bot
-TELEGRAM_TOKEN = "7549776797:AAERtnzIVcTuqr818HK9-VU-LMERsA03V_A"
+load_dotenv()
+
+
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 # Configura logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
